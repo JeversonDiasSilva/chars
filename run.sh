@@ -30,7 +30,7 @@ if [ -f "$SCRIPT_PATH" ]; then
 fi
 
 # Baixar o arquivo da URL (sem saída)
-echo -e "${VERDE}BAIXANDO O ARQUIVO DE: $URL${NENHUMA}"
+echo -e "${VERDE}BAIXANDO O ARQUIVO DE: HTTPS://**************"
 wget "$URL" -O "/tmp/$SQUASH" &>/dev/null
 if [ $? -ne 0 ]; then
     echo -e "${VERDE}ERRO AO BAIXAR O ARQUIVO $SQUASH!${NENHUMA}"
@@ -65,7 +65,7 @@ fi
 # Limpar arquivos temporários
 rm -rf "$TEMP_DIR"
 rm -f "/tmp/$SQUASH"
-
+sleep 5
 # Salvar a overlay
 echo -e "${VERDE}SALVANDO OVERLAY...${NENHUMA}"
 batocera-save-overlay 250

@@ -38,7 +38,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Descompactar o arquivo baixado (sem saída)
-echo -e "${VERDE}DESCOMPACTANDO $SQUASH...${NENHUMA}"
+echo -e "${VERDE}DESCOMPACTANDO SQUASH...${NENHUMA}"
 unsquashfs -d "$TEMP_DIR" "/tmp/$SQUASH" &>/dev/null
 if [ $? -ne 0 ]; then
     echo -e "${VERDE}ERRO AO DESCOMPACTAR O ARQUIVO $SQUASH!${NENHUMA}"
